@@ -14,7 +14,7 @@ class Main extends Component {
     }
 
     onCampsiteSelect(campsiteId) {
-        this.setState({selectedCampsite: campsiteId});
+        this.setState({ selectedCampsite: campsiteId });
     }
 
     render() {
@@ -25,7 +25,7 @@ class Main extends Component {
                         <NavbarBrand href="/">NuCamp</NavbarBrand>
                     </div>
                 </Navbar>
-                <Directory campsites={this.state.campsites} onClick={campsiteId => this.onCampsiteSelect(campsiteId)}/>
+                <Directory campsites={this.state.campsites} onClick={campsiteId => this.onCampsiteSelect(campsiteId)} />
                 <CampsiteInfo campsite={this.state.campsites.filter(campsite => campsite.id === this.state.selectedCampsite)[0]} />
             </div>
         );
