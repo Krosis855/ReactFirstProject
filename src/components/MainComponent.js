@@ -14,7 +14,7 @@ const mapStatetoProps = state => {
         campsites: state.campsites,
         comments: state.comments,
         partners: state.partners,
-        propmotions: state.promotions
+        promotions: state.promotions
     }
 }
 class Main extends Component {
