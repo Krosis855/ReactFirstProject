@@ -107,6 +107,7 @@ class CommentForm extends Component {
     );
   }
 }
+
 function RenderCampsite({ campsite }) {
   if (campsite) {
     return (
@@ -123,6 +124,7 @@ function RenderCampsite({ campsite }) {
   }
   return <div />;
 }
+
 function RenderComments({ comments }) {
   if (comments) {
     return (
@@ -149,6 +151,7 @@ function RenderComments({ comments }) {
   }
   return <div />;
 }
+
 function CampsiteInfo(props) {
   return (
     <div className="container">
@@ -171,4 +174,5 @@ function CampsiteInfo(props) {
     </div>
   );
 }
+
 export default CampsiteInfo;
