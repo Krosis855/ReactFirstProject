@@ -16,6 +16,7 @@ import {
 import { Link } from "react-router-dom";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl"
 
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
@@ -118,7 +119,7 @@ function RenderCampsite({ campsite }) {
     return (
       <div className="col-md-5 m-1">
         <Card>
-          <CardImg top src={campsite.image} alt={campsite.name} />
+          <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
           <CardBody>
             <CardTitle>{campsite.name}</CardTitle>
             <CardText>{campsite.description}</CardText>
@@ -140,7 +141,7 @@ function RenderComments({ comments, addComment, campsiteId }) {
             <div key={comment.id}>
               <p>
                 {comment.text} <br />
-                -- {comment.author},
+                -- {comment.author},{" "}
                 {new Intl.DateTimeFormat("en-US", {
                   year: "numeric",
                   month: "short",
