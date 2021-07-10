@@ -86,17 +86,17 @@ class Header extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/directory">
-                    <i className="fa fa-home fa-lg" /> Directory
+                    <i className="fa fa-list fa-lg" /> Directory
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/aboutus">
-                    <i className="fa fa-home fa-lg" /> About
+                    <i className="fa fa-info fa-lg" /> About
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/contactus">
-                    <i className="fa fa-home fa-lg" /> Contact Us
+                    <i className="fa fa-address-card fa-lg" /> Contact Us
                   </NavLink>
                 </NavItem>
               </Nav>
@@ -136,7 +136,7 @@ class Header extends Component {
                   <Input
                     type="checkbox"
                     name="remember"
-                    innerRef={(input) => (this.username = input)}
+                    innerRef={(input) => (this.remember = input)}
                   />
                   Remember me
                 </Label>
